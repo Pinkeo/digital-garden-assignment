@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title%}
+Your profile
+{% endblock %}
+{% block content %}
+<hr>
+<h4 class="title">
+  Welcome, {{ name }}! <br> 
+</h4>
+  
+<section class="vh-100">
+  <div class="container py-5 h-100">
+      <div class="col-md-12 col-xl-4">
+        <div class="card" style="border-radius: 15px;">
+          <div class="mt-3 mb-4">
+            <img src="/static/imgs/avata.png" class="rounded-circle img-fluid" style="width:100px">
+            <h4 class="name"> {{name}} </h4>
+            <hr>
+          </div>
+            <p class="text-muted mb-4">your email: {{email}}</p>
+            <p class="text-muted mb-4">username: {{name}}</p>
+            <p class="text-muted mb-4">ຂໍໃຫ້ເຈົ້າຈື່ລະຫັດຂອງເຈົ້າເອງ ເພາະຖ້າລືມ ຂ້ອຍກໍຊ່ວຍຫຍັງບໍ່ໄດ້ເພາະຍັງບໍ່ໄດ້ເຣັດລະບົບຮີເຊັດລະຫັດ ຫວັງວ່າຈະເຂົ້າໃຈເນາະ</p>
+            <div class="mb-4 pb-2">
+              <button type="button" class="btn btn-primary btn-rounded btn-lg" > <a href="{{ url_for('auth.logout') }}"> Logout</a>
+              </button>
+            </div>
+        </div>
+      </div>
+  </div>  
+  
+  
+</section>
+
+<style type="text/css">
+  p{
+    text-align: center;
+    margin: 30px;
+
+  }
+  .name {
+    margin-left: 50% ;
+ 
+  }
+</style>
+
+
+
+
+
+{% endblock %}
